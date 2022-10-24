@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste botão</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        
+        $(document).ready(function(){
+            $("#dark").click(function(){
+                $("body").removeClass()
+                $("body").addClass("fundo-escuro")
+            });
+            $("#white").click(function(){
+                $("body").removeClass()
+                $("body").addClass("fundo-claro")
+            });
+            $("#pink").click(function(){
+                $("body").removeClass()
+                $("body").addClass("pink")
+            })
+        });
+
+        $(document).ready(function(){
+            $("#white").hide()           
+            $("#dark").click(function(){
+                $("#dark").hide()
+                $("#white , #pink").show()
+            });
+            $("#pink").click(function(){
+                $("#pink").hide()
+                $("#white,#dark").show()
+            })
+            $("#white").click(function(){
+                $("#white").hide()
+                $("#pink,#dark").show()
+            })                   
+        })
+
+    </script>
+    <style>
+        .fundo-escuro{
+            background-color: black;
+            color: white;
+        }
+        .fundo-claro{
+            background-color: white;
+        }
+        .pink{
+            background-color: pink;
+            color: green;
+        }
+
+
+        
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <button id="dark">Escuro</button>
+        <button id="white">Claro</button>
+        <button id="pink">Pink</button>
+        <p>
+            Exercício do botão que não e mais necessário desaparecer!!
+        </p>
+
+    </div>
+    
+</body>
+</html>
